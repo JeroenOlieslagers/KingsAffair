@@ -73,13 +73,22 @@ nav .nav-link:hover {
 }
 
 .background {
-	position: relative;
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	background-position: %50 0;
+	background-position: center;
 	background-size: cover; 
 	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.background::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
 }
 
 .overlay {	
@@ -211,7 +220,16 @@ nav .nav-link:hover {
 footer {
 	padding-top: 10rem;
 	padding-bottom: 2.5rem;
+	background: -webkit-gradient(linear, center top, center bottom, from(#09101c), to(#000000));
+	background: -webkit-linear-gradient(rgba(9, 16, 28), rgba(0,0,0));
+	background: -moz-linear-gradient(#09101c, #000000);
+	background: -o-linear-gradient(#09101c, #000000);
+	background: -ms-linear-gradient(#09101c, #000000);
 	background: linear-gradient(rgba(9, 16, 28), rgba(0,0,0));
+}
+
+footer p:last-child {
+	font-size: 0.75rem;
 }
 
 @media
