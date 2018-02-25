@@ -77,7 +77,7 @@ nav .nav-link:hover {
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	background-position: center;
+	background-position: %50 0;
 	background-size: cover; 
 	background-repeat: no-repeat;
 }
