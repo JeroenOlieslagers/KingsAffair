@@ -1,11 +1,27 @@
 @font-face {
-    font-family: 'NEOTERIC';
-    src:url('../fonts/NEOTERIC.ttf.woff') format('woff'),
-        url('../fonts/NEOTERIC.ttf.svg#NEOTERIC') format('svg'),
-        url('../fonts/NEOTERIC.ttf.eot'),
-        url('../fonts/NEOTERIC.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-family: 'neotericregular';
+    src: url('../fonts/neoteric__-_regular_commercial_version-webfont.eot');
+    src: url('../fonts/neoteric__-_regular_commercial_version-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/neoteric__-_regular_commercial_version-webfont.woff2') format('woff2'),
+         url('../fonts/neoteric__-_regular_commercial_version-webfont.woff') format('woff'),
+         url('../fonts/neoteric__-_regular_commercial_version-webfont.ttf') format('truetype'),
+         url('../fonts/neoteric__-_regular_commercial_version-webfont.svg#neotericregular') format('svg');
     font-weight: normal;
     font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'neotericbold';
+    src: url('../fonts/neoteric__-_bold_commercial_version-webfont.eot');
+    src: url('../fonts/neoteric__-_bold_commercial_version-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/neoteric__-_bold_commercial_version-webfont.woff2') format('woff2'),
+         url('../fonts/neoteric__-_bold_commercial_version-webfont.woff') format('woff'),
+         url('../fonts/neoteric__-_bold_commercial_version-webfont.ttf') format('truetype'),
+         url('../fonts/neoteric__-_bold_commercial_version-webfont.svg#neotericbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
@@ -21,7 +37,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	font-family: 'NEOTERIC';
+	font-family: 'neotericregular';
     letter-spacing: 1px;
 	color: rgb(255, 221, 97);
 }
@@ -111,7 +127,9 @@ nav .nav-link:hover {
 	text-align: center;
 }	
 
-.wrapper span {
+.wrapper h5 {
+	font-family: 'neotericbold';
+	font-weight: 'bold';
 	display: inline-block;
 	text-align: center;
 	margin-bottom: 15px;
@@ -166,16 +184,23 @@ nav .nav-link:hover {
 .info .col-md-6 div {	
 	background-color: rgb(9, 16, 28);
 	padding: 15px;
-	height: 300px;
+	min-height: 350px;
 }
 
 .info .col-md-6:last-child {	
-	margin-top: 250px;
+	margin-top: 300px;
 }
 
 .definition {
+	text-align: left;
 	margin-right: 10px;
 }
+
+.definition h5 {
+	text-align: left;
+	font-weight: 'neotericbold';
+}
+
 .youtube {
 	margin-left: 10px;
 }
