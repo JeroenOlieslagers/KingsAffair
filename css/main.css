@@ -222,8 +222,9 @@ nav .nav-link:hover {
 }
 
 .card-text {
-	text-align: left;
+	text-align: center;
 }
+
 
 .important {
 	font-weight: 900 !important;
@@ -232,6 +233,10 @@ nav .nav-link:hover {
 
 .text-muted {
 	color: rgb(192, 157, 25) !important;
+}
+
+.tickets .card-subtitle {
+	margin-bottom: 10px;
 }
 
 .namechanges .content {
