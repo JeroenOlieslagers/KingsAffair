@@ -8,7 +8,6 @@
          url('../fonts/neoteric__-_regular_commercial_version-webfont.svg#neotericregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -174,12 +173,12 @@ nav .nav-link:hover {
 .info .col-md-6 div {	
 	background-color: rgb(9, 16, 28);
 	padding: 15px;
-	min-height: 400px;
+	min-height: 300px;
 }
 
 
 .info .col-md-6:last-child {	
-	margin-top: 300px;
+	margin-top: 320px;
 }
 
 @media (max-width: 768px) {
@@ -274,6 +273,11 @@ nav .nav-link:hover {
 
 .sponsor p.hidden {
 	display: none;
+}
+
+.more, .less {
+	text-decoration: underline;
+    cursor: pointer;   
 }
 
 #qpay img {
