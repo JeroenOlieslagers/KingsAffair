@@ -256,14 +256,14 @@ nav .nav-link:hover {
 }
 
 .sponsor {
+	display: flex;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	clear: both;
+	flex-direction: row;
 }
 
 .sponsor img {
 	margin: 5px;
-	height: auto;
 }
  
 .sponsor p {
@@ -275,20 +275,28 @@ nav .nav-link:hover {
 	display: none;
 }
 
-.more, .less {
+a {
+	color: rgb(255, 221, 97);
+}
+
+a:hover {
 	text-decoration: underline;
     cursor: pointer;   
+	color: rgb(192, 157, 25) !important;
 }
+
 
 #qpay img {
 	width: 100px;
-	float: left;
 	margin-right: 30px;
+}
+
+#qpay p {
+	margin-top: 25px;
 }
 
 #coolearth img {
 	width: 150px;
-	float: right;
 	margin-left: 30px;
 }
 
