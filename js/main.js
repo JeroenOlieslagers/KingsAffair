@@ -24,3 +24,17 @@ $('.sponsor .less').on('click', function(){
 	$(this).parents('.sponsor').find('.hidden').hide();
 	$(this).parents('.sponsor').find('.more').show();
 });
+
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}
+
+if($.urlParam('redirectback') == 'true'){
+	alert("Validation of member status has failed—are you a member of the university?\nIf so, please try again.");
+}
