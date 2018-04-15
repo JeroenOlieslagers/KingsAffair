@@ -238,8 +238,11 @@ nav .nav-link:hover {
 	margin-bottom: 10px;
 }
 
-.namechanges .content {
-	text-align: center;
+.namechanges ul {
+	display: inline-block;
+	padding: 0;
+	text-align: left;
+	margin: 0 auto;
 }
 
 .sponsors  {
