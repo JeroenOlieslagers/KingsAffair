@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'neotericregular';
+    src: url('neoteric__-_regular_commercial_version-webfont.eot');
+    src: url('neoteric__-_regular_commercial_version-webfont.eot?#iefix') format('embedded-opentype'),
+         url('neoteric__-_regular_commercial_version-webfont.woff2') format('woff2'),
+         url('neoteric__-_regular_commercial_version-webfont.woff') format('woff'),
+         url('neoteric__-_regular_commercial_version-webfont.ttf') format('truetype'),
+         url('neoteric__-_regular_commercial_version-webfont.svg#neotericregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
