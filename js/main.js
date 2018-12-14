@@ -1,40 +1,53 @@
-$.getJSON('https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F225490082%2Fc80dd964a2', function(data){
-	$('.youtube').append(data.html);
-	var video = $('.youtube iframe').data('aspectRatio', (data.height / data.width))
-								.removeAttr('width')
-								.removeAttr('height');
-	var width = $('.youtube').width();
-	var height = width  * video.data('aspectRatio');
-	video.width(width).height(height);
-});
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 27, 2019 19:30:00").getTime();
 
-$(window).resize(function(){
-	var video = $('.youtube iframe');
-	var width = $('.youtube').width();
-	var height = width  * video.data('aspectRatio');
-	video.width(width).height(height);
-});
+// Update the count down every 1 second
+var x = setInterval(function () {
 
-$('.sponsor .more').on('click', function(){
-	$(this).parent().siblings('.hidden').show();
-	$(this).hide();
-});
+    // Get todays date and time
+    var now = new Date().getTime();
 
-$('.sponsor .less').on('click', function(){
-	$(this).parents('.sponsor').find('.hidden').hide();
-	$(this).parents('.sponsor').find('.more').show();
-});
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
 
-$.urlParam = function(name){
-    var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
-    if (results==null){
-       return null;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "LAUNCH PARTY";
     }
-    else{
-       return results[1] || 0;
-    }
-}
+}, 1000);
 
-if($.urlParam('redirectback') == 'true'){
-	alert("Validation of member status has failed—are you a member of the university?\nIf so, please try again.");
-}
+$('.ml12').each(function () {
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+ml.timelines["ml12"] = anime.timeline({ loop: true })
+  .add({
+      targets: '.ml12 .letter',
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 12000,
+      delay: function (el, i) {
+          return 500 + 30 * i;
+      }
+  }).add({
+      targets: '.ml12 .letter',
+      translateX: [0, -30],
+      opacity: [1, 0],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: function (el, i) {
+          return 100 + 30 * i;
+      }
+  });
