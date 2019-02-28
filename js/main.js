@@ -74,7 +74,7 @@ $(function (){
         count++;
     });
 
-    if ($(window).width() >= 1024) {
+    if ($(window).width() >= 1200) {
         $(function () {
             var scene;
             // get all slides
