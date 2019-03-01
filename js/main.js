@@ -49,7 +49,11 @@ $(function (){
         });
         if (goal) {
             $(".circle")
-                .html("Sub 2 PewDiePie\n" + count + "/1000")
+                .html("Sub 2 PewDiePie\n" + count + "/1000 (Get arrow keys ready)");
+        }
+        if (!goal) {
+            $(".circle")
+                .html("?!");
         }
         if (count%10 == 0) {
             $(".circle").animate({

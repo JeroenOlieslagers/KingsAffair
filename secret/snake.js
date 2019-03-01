@@ -1,6 +1,11 @@
 var cvs = document.getElementById('canvas');
 var ctx = cvs.getContext('2d');
 
+ctx.canvas.width = window.innerWidth - 20;
+ctx.canvas.height = window.innerHeight - 50;
+
+const isStorage = 'undefined' !== typeof localStorage;
+
 var size = 40;
 var speed = 1;
 var border = 3;
@@ -14,8 +19,16 @@ var food = fruit();
 var snake = [];
 var eat = false;
 var len = 1;
+var scores = [];
 var gameOverMenu = document.getElementById('game-over');
+var ol = document.createElement('ol');
+var scoreBoard = document.getElementById('score-board').appendChild(ol);
 var restartButton = document.getElementById('restart');
+
+
+if (isStorage && localStorage.getItem('scores')) {
+    scores = JSON.parse(localStorage.getItem('scores'));
+}
 
 for (var i = len - 1; i >= 0; i--) {
     snake.push({
@@ -88,6 +101,25 @@ function gameOver() {
     gameOverMenu.style.visibility = 'visible';
     gameOverMenu.style.top = (cvs.height / 2) - (gameOverMenu.offsetHeight / 2) + 'px';
     gameOverMenu.style.left = (cvs.width / 2) - (gameOverMenu.offsetWidth / 2) + 'px';
+    var name = prompt("Please enter your name", "<name goes here>");
+    scores.push({
+        name: name,
+        score: score
+    });
+    scores = scores.sort(function (a, b) {
+        return parseFloat(b.score) - parseFloat(a.score);
+    }).slice(0, 5);
+
+    console.log(scores);
+
+    scores.forEach(function (name) {
+        var li = document.createElement('li');
+        ol.appendChild(li);
+        li.innerHTML += name.name + ' : ' + name.score;
+    });
+    
+    scores = JSON.stringify(scores);
+    isStorage && localStorage.setItem('scores', scores);
 }
 
 function main() {
