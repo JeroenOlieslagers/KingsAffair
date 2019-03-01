@@ -49,7 +49,7 @@ $(function (){
         });
         if (goal) {
             $(".circle")
-                .html("Sub 2 PewDiePie\n" + count + "/1000 (Get arrow keys ready)");
+                .html("Sub 2 PewDiePie\n" + count + "/420 (Get arrow keys ready)");
         }
         if (!goal) {
             $(".circle")
@@ -70,7 +70,7 @@ $(function (){
         if (count == 9) {
             goal = true;
         }
-        if (count == 1000) {
+        if (count == 100) {
             //Excuse me, no cheating
             //Get clicking
             window.location.href = 'secret/secret.html';
