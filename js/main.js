@@ -10,6 +10,8 @@ $(function (){
             loopCounter++;
         }
     }, false);*/
+    var tickets = document.getElementById('tickets');
+    
     var count = 0;
     var goal = false;
     $(".circle").click(function () {
@@ -70,7 +72,7 @@ $(function (){
         if (count == 9) {
             goal = true;
         }
-        if (count == 100) {
+        if (count == 420) {
             //Excuse me, no cheating
             //Get clicking
             window.location.href = 'secret/secret.html';
