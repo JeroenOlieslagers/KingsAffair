@@ -155,6 +155,7 @@ section {
 p {
     padding: 25px;
     text-align: left;
+    -webkit-text-stroke: 0.5px black;
 }
 .q {
     font-weight: bold;

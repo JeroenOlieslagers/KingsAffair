@@ -11,6 +11,8 @@ $(function (){
         }
     }, false);*/
     var tickets = document.getElementById('tickets');
+    var charity = document.getElementById('charity');
+    var foot = document.getElementById('foot');
     
     var count = 0;
     var goal = false;
@@ -79,8 +81,14 @@ $(function (){
         }
         count++;
     });
+    if ($(window).width() >= 800) {
+        dum = ($(window).height() + 400).toString() + 'px';
+        dum1 = ($(window).height() + 100).toString() + 'px';
+        tickets.setAttribute("style", "height:" + dum);
+        charity.setAttribute("style", "height:" + dum1);
+    }
 
-    if ($(window).width() >= 1200 && $(window).height() >= 800) {
+    if ($(window).width() >= 1200 && $(window).height() >= 750) {
         $(function () {
             var scene;
             // get all slides
