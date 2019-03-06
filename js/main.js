@@ -88,7 +88,7 @@ $(function (){
         charity.setAttribute("style", "height:" + dum1);
     }
 
-    if ($(window).width() >= 1200 && $(window).height() >= 750) {
+    if ($(window).width() >= 1200 && $(window).height() >= 800) {
         $(function () {
             var scene;
             // get all slides
